@@ -2,24 +2,60 @@ import os
 
 import openai as openai
 
-
 from openai import OpenAI
 from openai import AsyncOpenAI
 
+# openai.base_url = "https://api.openai.comv"
 
 client = OpenAI(
     api_key=os.environ['OPENAI_API_KEY'],
 )
 
-completion = OpenAI().completions.create(
+completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
-    prompt="Say this is a test",
+    messages=[
+        {
+            "role": "user",
+            "content": "Where is the capital of China?",
+        },
+    ],
 )
 
-print(completion.choices[0].text)
-print(dict(completion).get('usage'))
-print(completion.model_dump_json(indent=2))
+# 打印结果是：ChatCompletionMessage(content='The capital of China is Beijing.', role='assistant', function_call=None, tool_calls=None)
+print(completion.choices[0].message)
 
+# 打印结果是：CompletionUsage(completion_tokens=0, prompt_tokens=0, total_tokens=0)
+print(dict(completion).get('usage'))
+
+'''
+打印结果是：
+{
+  "id": "chatcmpl-krmt5cxGc9u7SzC2mEGG0UoFrUV6b",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "The capital of China is Beijing.",
+        "role": "assistant",
+        "function_call": null,
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1710415795,
+  "model": "gpt-3.5-turbo",
+  "object": "chat.completion",
+  "system_fingerprint": "fp_ab32547f0d",
+  "usage": {
+    "completion_tokens": 0,
+    "prompt_tokens": 0,
+    "total_tokens": 0
+  }
+}
+'''
+print(completion.model_dump_json(indent=2))
 
 # 异步
 
@@ -27,4 +63,20 @@ print(completion.model_dump_json(indent=2))
 client = AsyncOpenAI(api_key=os.environ['OPENAI_API_KEY'])
 completion = await client.chat.completions.create(model="gpt-3.5-turbo",
                                                   messages=[{"role": "user", "content": "Hello world"}])
+'''
+
+# 官网示例
+'''
+client = OpenAI(api_key="sk-6DRRiOSKKtdbGZRL9771171546D14261974bB5Bb81FfB260", base_url="https://www.gptapi.us/v1")
+
+completion = client.chat.completions.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system",
+         "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
+        {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
+    ]
+)
+
+print(completion.choices[0].message)
 '''
