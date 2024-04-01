@@ -5,11 +5,19 @@ import openai as openai
 from openai import OpenAI
 from openai import AsyncOpenAI
 
-# openai.base_url = "https://api.openai.comv"
+# openai.base_url = "https://api.openai.com/v1"
 
 client = OpenAI(
     api_key=os.environ['OPENAI_API_KEY'],
 )
+
+'''
+# 学院提供key的方式
+client = OpenAI(api_key="b1f15c51c0ea080ccf16172802a44960")
+openai.api_base = "https://apitoken.ceba.ceshiren.com/openai/v1/"
+openai.base_url = "https://apitoken.ceba.ceshiren.com/openai/v1/"
+"http://20.150.220.45/chatgpt/v1"
+'''
 
 completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
@@ -79,4 +87,15 @@ completion = client.chat.completions.create(
 )
 
 print(completion.choices[0].message)
+'''
+
+'''
+def test_text_to_speech():
+    response = client.audio.speech.create(
+        model="tts-1",
+        voice="nova",
+        input="Hello, how are you?"
+    )
+
+    response.stream_to_file(speech_file="speech.mp3")
 '''

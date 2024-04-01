@@ -1,0 +1,299 @@
+<div class="search-header" role="search">
+    <h1 class="search-page-heading">
+        搜索
+    </h1>
+    <div class="search-bar">
+        <input aria-controls="search-result-count" aria-label="输入搜索关键字" autocomplete="off" placeholder="搜索"
+               id="ember80" class="full-page-search search no-blur search-query ember-text-field ember-view"
+               type="text">
+        <details id="search-type" class="select-kit single-select combobox combo-box has-selection ember-view">
+            <summary aria-label="筛选条件：话题/帖子" name="筛选条件：话题/帖子" data-name="话题/帖子"
+                     data-value="topics_posts" tabindex="0" role="listbox" id="search-type-header"
+                     class="select-kit-header single-select-header combo-box-header ember-view">
+                <div class="select-kit-header-wrapper">
+                    <!---->
+
+                    <div title="话题/帖子" data-value="topics_posts" data-name="话题/帖子" role="option"
+                         class="select-kit-selected-name selected-name choice">
+                        <!---->
+                        <span class="name">
+      话题/帖子
+    </span>
+
+                        <!---->  </div>
+
+
+                    <!---->
+                    <svg class="fa d-icon d-icon-caret-down svg-icon caret-icon svg-string"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <use href="#caret-down"></use>
+                    </svg>
+                </div>
+            </summary>
+
+            <div id="search-type-body" class="select-kit-body ember-view" style="position: relative;"><!----></div>
+        </details>
+        <button class="btn-primary search-cta
+
+    btn
+
+    btn-icon-text" aria-label="搜索" type="button">
+            <svg class="fa d-icon d-icon-search svg-icon svg-string" xmlns="http://www.w3.org/2000/svg">
+                <use href="#search"></use>
+            </svg>
+            <span class="d-button-label">搜索<!----></span>
+        </button>
+    </div>
+    <!---->
+    <div class="search-filters">
+        <details open="" id="ember82" class="advanced-filters ember-view">
+            <summary>
+                高级筛选器
+            </summary>
+            <div class="search-advanced-filters">
+                <div class="search-advanced-options">
+                    <!---->
+
+                    <div class="control-group advanced-search-category">
+                        <label class="control-label">分类</label>
+                        <div class="controls">
+                            <details id="search-in-category"
+                                     class="select-kit single-select combobox combo-box category-chooser search-advanced-category-chooser ember-view">
+                                <summary aria-label="筛选条件：所有类别" name="筛选条件：所有类别" data-name="所有类别"
+                                         data-value="" tabindex="0" role="listbox" id="search-in-category-header"
+                                         class="select-kit-header single-select-header combo-box-header ember-view">
+                                    <div class="select-kit-header-wrapper">
+                                        <!---->
+
+                                        <div title="所有类别" data-name="所有类别" role="option"
+                                             class="select-kit-selected-name selected-name choice">
+                                            <!---->
+                                            <span class="name">
+      所有类别
+    </span>
+
+                                            <!---->  </div>
+
+
+                                        <!---->
+                                        <svg class="fa d-icon d-icon-caret-down svg-icon caret-icon svg-string"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#caret-down"></use>
+                                        </svg>
+                                    </div>
+                                </summary>
+
+                                <div id="search-in-category-body" class="select-kit-body ember-view"
+                                     style="position: relative;"><!----></div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="control-group advanced-search-topics-posts">
+                        <div class="controls">
+                            <fieldset class="grouped-control">
+                                <legend class="grouped-control-label">只返回话题/帖子…</legend>
+
+                                <div class="grouped-control-field">
+                                    <input id="matching-title-only" class="ember-checkbox ember-view in-title"
+                                           type="checkbox">
+                                    <label for="matching-title-only">
+                                        仅在标题中匹配
+                                    </label>
+                                </div>
+
+                                <div class="grouped-control-field">
+                                    <input id="matching-liked" class="ember-checkbox ember-view in-likes"
+                                           type="checkbox">
+                                    <label for="matching-liked">我赞过</label>
+                                </div>
+
+                                <div class="grouped-control-field">
+                                    <input id="matching-in-messages" class="ember-checkbox ember-view in-private"
+                                           type="checkbox">
+                                    <label for="matching-in-messages">在我的消息中</label>
+                                </div>
+
+                                <div class="grouped-control-field">
+                                    <input id="matching-seen" class="ember-checkbox ember-view in-seen" type="checkbox">
+                                    <label for="matching-seen">我读过</label>
+                                </div>
+
+                                <details id="in" class="select-kit single-select combobox combo-box ember-view">
+                                    <summary aria-label="筛选条件：任意" name="筛选条件：任意" data-name="任意"
+                                             tabindex="0" role="listbox" id="in-header"
+                                             class="select-kit-header single-select-header combo-box-header ember-view">
+                                        <div class="select-kit-header-wrapper">
+                                            <!---->
+
+                                            <div title="任意" data-name="任意" role="option"
+                                                 class="select-kit-selected-name selected-name choice">
+                                                <!---->
+                                                <span class="name">
+      任意
+    </span>
+
+                                                <!---->  </div>
+
+
+                                            <!---->
+                                            <svg class="fa d-icon d-icon-caret-down svg-icon caret-icon svg-string"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <use href="#caret-down"></use>
+                                            </svg>
+                                        </div>
+                                    </summary>
+
+                                    <div id="in-body" class="select-kit-body ember-view" style="position: relative;">
+                                        <!----></div>
+                                </details>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="control-group advanced-search-topic-status">
+                        <label class="control-label">话题</label>
+                        <div class="controls">
+                            <details id="search-status-options"
+                                     class="select-kit single-select combobox combo-box ember-view">
+                                <summary aria-label="筛选条件：任意" name="筛选条件：任意" data-name="任意" tabindex="0"
+                                         role="listbox" id="search-status-options-header"
+                                         class="select-kit-header single-select-header combo-box-header ember-view">
+                                    <div class="select-kit-header-wrapper">
+                                        <!---->
+
+                                        <div title="任意" data-name="任意" role="option"
+                                             class="select-kit-selected-name selected-name choice">
+                                            <!---->
+                                            <span class="name">
+      任意
+    </span>
+
+                                            <!---->  </div>
+
+
+                                        <!---->
+                                        <svg class="fa d-icon d-icon-caret-down svg-icon caret-icon svg-string"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#caret-down"></use>
+                                        </svg>
+                                    </div>
+                                </summary>
+
+                                <div id="search-status-options-body" class="select-kit-body ember-view"
+                                     style="position: relative;"><!----></div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="control-group advanced-search-posted-by">
+                        <label class="control-label">
+                            发帖人
+                        </label>
+                        <div class="controls">
+                            <details id="search-posted-by" class="select-kit multi-select user-chooser ember-view">
+                                <summary data-name="" tabindex="0" role="listbox" id="search-posted-by-header"
+                                         class="select-kit-header multi-select-header ember-view">
+                                    <div class="select-kit-header-wrapper">
+                                        <!---->
+                                        <span class="formatted-selection">
+  选择…
+</span>
+
+                                        <svg class="fa d-icon d-icon-plus svg-icon caret-icon svg-string"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </summary>
+                            </details>
+                        </div>
+                    </div>
+
+                    <div class="control-group advanced-search-posted-date">
+                        <label class="control-label">发布时间</label>
+                        <div class="controls inline-form full-width">
+                            <details id="postTime"
+                                     class="select-kit single-select combobox combo-box has-selection ember-view">
+                                <summary aria-label="筛选条件：早于" name="筛选条件：早于" data-name="早于"
+                                         data-value="before" tabindex="0" role="listbox" id="postTime-header"
+                                         class="select-kit-header single-select-header combo-box-header ember-view">
+                                    <div class="select-kit-header-wrapper">
+                                        <!---->
+
+                                        <div title="早于" data-value="before" data-name="早于" role="option"
+                                             class="select-kit-selected-name selected-name choice">
+                                            <!---->
+                                            <span class="name">
+      早于
+    </span>
+
+                                            <!---->  </div>
+
+
+                                        <!---->
+                                        <svg class="fa d-icon d-icon-caret-down svg-icon caret-icon svg-string"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <use href="#caret-down"></use>
+                                        </svg>
+                                    </div>
+                                </summary>
+
+                                <div id="postTime-body" class="select-kit-body ember-view" style="position: relative;">
+                                    <!----></div>
+                            </details>
+                            <div id="ember93" class="d-date-input ember-view"><input placeholder="日期"
+                                                                                     id="search-post-date"
+                                                                                     class="ember-text-field ember-view date-picker"
+                                                                                     type="date">
+
+                                <div class="picker-container"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---->
+                </div>
+
+                <details class="search-advanced-additional-options">
+                    <summary>
+                        按帖子数量和话题浏览量筛选
+                    </summary>
+                    <div class="count-group control-group">
+                        <span class="control-label">帖子</span>
+                        <div class="controls">
+                            <input placeholder="最小值" id="search-min-post-count"
+                                   class="ember-text-field ember-view input-small" aria-label="按最小帖子数筛选"
+                                   type="number">
+                            <svg class="fa d-icon d-icon-arrows-alt-h svg-icon svg-string"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <use href="#arrows-alt-h"></use>
+                            </svg>
+                            <input placeholder="最大值" id="search-max-post-count"
+                                   class="ember-text-field ember-view input-small" aria-label="按最大帖子数筛选"
+                                   type="number">
+                        </div>
+                    </div>
+
+                    <div class="count-group control-group">
+                        <span class="control-label">浏览量</span>
+                        <div class="controls">
+                            <input placeholder="最小值" id="search-min-views"
+                                   class="ember-text-field ember-view input-small" aria-label="按最小浏览量筛选"
+                                   type="number">
+                            <svg class="fa d-icon d-icon-arrows-alt-h svg-icon svg-string"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <use href="#arrows-alt-h"></use>
+                            </svg>
+                            <input placeholder="最大值" id="search-max-views"
+                                   class="ember-text-field ember-view input-small" aria-label="按最大浏览量筛选"
+                                   type="number">
+                        </div>
+                    </div>
+                </details>
+
+                <!----></div>
+        </details>
+    </div>
+
+</div>

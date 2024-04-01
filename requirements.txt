@@ -1,0 +1,12 @@
+transformers
+transformers[agents]
+pytest
+openai
+soundfile
+scipy
+torchvision
+torchaudio
+timm
+pygame
+gradio
+langchain
