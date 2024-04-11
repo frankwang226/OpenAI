@@ -1,6 +1,7 @@
 from urllib.parse import quote_plus
 
 import sqlalchemy
+import yaml
 from langchain.chains.sql_database.query import SQLInputWithTables
 from langchain.globals import set_debug
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
@@ -17,9 +18,10 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 
-password = "nZCEPbDFJ#uu7k@I"
+yaml_data = yaml.safe_load(open("../../data/password.yaml"))
+password = yaml_data['password']
 url = "mysql+pymysql://tempwrite:" + quote_plus(
-    password) + "@bj-cdb-3kzmnwf8.sql.tencentcdb.com:61397/ezp-mall"  # password + "@bj-cdb-3kzmnwf8.sql.tencentcdb.com:61397/ezp-mall?charset=utf8"
+    password) + "@bj-cdb-3kzmnwf8.sql.tencentcdb.com:61397/ezp-mall"  # password.yaml + "@bj-cdb-3kzmnwf8.sql.tencentcdb.com:61397/ezp-mall?charset=utf8"
 engine = create_engine(url)
 
 db = SQLDatabase.from_uri(url)
